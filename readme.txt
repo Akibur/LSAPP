@@ -1,3 +1,49 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+To setup 
+
+
+DOwnload and install XAMP verison 5.6.35 / PHP 5.6.35	from https://www.apachefriends.org/download.html
+COpy LSAPP folder to xamp htdocs
+run artisan command to get vendor folder
+In browser go to localhost:8080 to run project 
+
+acache port - 8080
+Phpmyadmin port- 3306
+
+
+Im using git to push and commit.If you cant use git then make a seperate folder named selim or tusher.Then upload the project except vendor folder.reatea read me file and mention the additions that you have made.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
