@@ -16,13 +16,13 @@ class SignupController extends Controller
 
     public function studentSignup (Request $request)
     {
-        echo $request->Gender;
+        //echo $request->Gender;
          $u = new Users();
          $u->name= $request->name;
          $u->email= $request->email;
          $u->gender= $request->Gender;
          $u->password= $request->password;
-         $u->role= "student";
+         $u->role= "student"; 
          $u->blocked= 0;
          $u->save();
 

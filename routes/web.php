@@ -15,16 +15,26 @@ Route::get('/', function () {
     return redirect('/signin');
     
 });
-
+//Signin controller
 Route::get('/signin', 'SigninController@index');
-
 Route::post('/signin', 'SigninController@verify');
 
+//signup controller
+Route::get('/signup', 'SignupController@index');
 Route::post('/signup', 'SignupController@studentSignup');
 
 
-Route::get('/adminHome','AdminHomeController@index');
 
-Route::get('/signup', 'SignupController@index');
+//Admin home controller
+Route::get('/adminHome','AdminHomeController@index');
+Route::get('/createCourse','AdminHomeController@createCourse');
+Route::post('/createCourse','AdminHomeController@storeCourse'); //creates new course in database
+Route::post('/createTeacher','AdminHomeController@storeTeacher'); //creates new teacher in database
+
+
+Route::get('/createTeacher','AdminHomeController@createTeacher');
+
+
+
 
 //Route::resource('user', 'UserController');

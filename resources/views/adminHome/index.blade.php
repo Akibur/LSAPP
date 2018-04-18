@@ -21,10 +21,10 @@
         <div class="row name">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <a class="nav-link active text-center" href="teacher.html">Create Course</a>
+                <a class="nav-link active text-center" href="/createCourse">Create Course</a>
             </div>
             <div class="col-md-4">
-                <a class="nav-link active text-center" href="teacher.html">Create Techer</a>
+                <a class="nav-link active text-center" href="/createTeacher">Create Techer</a>
             </div>
         </div>
         <div class="row">
