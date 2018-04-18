@@ -24,9 +24,20 @@ class SignupController extends Controller
          $u->password= $request->password;
          $u->role= "student"; 
          $u->blocked= 0;
-         $u->save();
+        
+        
+         if($u->save()){
+            $request->session()->flash('messageSuccess', 'SIgnup successful');
+            return redirect('/signin');
+         }
+         else if(!$u->save()){
 
-     	return redirect('/signup');
+            $request->session()->flash('message ', 'SIgnup Not successful');
+            return redirect()->back();
+
+
+         }
+
  
     }
 }

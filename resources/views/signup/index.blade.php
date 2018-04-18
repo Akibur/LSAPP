@@ -8,7 +8,13 @@
             <a class="navbar-brand" href="/signup">Sign Up</a>
         </nav>
 
-
+        @if(session('message'))
+        <div style class=" container alert alert-danger">
+           <p style="text-align:center;">{{session('message')}}</p>
+       </div>
+      
+ 
+    @endif
 
         <form class="form-signin" method="POST" >
                 <input name="_token" type="hidden" value="{{ csrf_token() }}"/>

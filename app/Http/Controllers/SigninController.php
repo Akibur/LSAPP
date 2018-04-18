@@ -39,16 +39,17 @@ class SigninController extends Controller
         //Null for cheking user auth
         $name = NULL;
          
-            $name =$result->name;
-          $role=  $result->role;
-          $blocked = $result->blocked;
+           
 
           
  
         // $role = $result->role;
         // echo 
-        if($name != NULL)
+        if($result)
     	{
+            $name =$result->name;
+            $role=  $result->role;
+            $blocked = $result->blocked;
 
            // echo $result;
             
@@ -71,12 +72,15 @@ class SigninController extends Controller
             } 
 
             else 
-                echo "Your account is blocked";
-
+            $request->session()->flash('message', 'Your account is blocked.Please contact the IT department ');
+            return redirect()->back();
     	}
     	else
     	{
-    		echo 'Invalid username or password';
+            $request->session()->flash('message', 'Invalid username or password');
+            return redirect()->back();
+
+
     	}
     }
 }
