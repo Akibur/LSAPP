@@ -15,12 +15,28 @@ class TeacherController extends Controller
         $courses = DB::table('courses')
         ->get();
 
-        // $studentEnrolledPerCourse = 
 
 
+        $countArr = collect([]);
 
-   // return view('category.index', ['courses' => $courses]);
-          return view('teacherHome.index', ['courses' => $courses]);
+
+ 
+        foreach($courses as $course){
+            if ( $course->user_id == session('user')->id ) {
+                $studentCount = "N/A"; 
+                $studentCount = DB::table('user_course')->where('course_id',$course->id)
+                                                        ->where('request' ,'=', 'approved')
+                                                        ->count('user_id');
+                $countArr->push($studentCount);
+
+               
+            }
+
+          
+    }
+   
+
+          return view('teacherHome.index', ['courses' => $courses], ['countArr'=> $countArr]);
 
     }
     public function showProfile()

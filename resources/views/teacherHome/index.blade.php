@@ -10,6 +10,7 @@
 </head>
 
 <body>
+         
     <div class="container">
         <nav class="navbar bg-light">
             <div>
@@ -35,20 +36,32 @@
                         <th scope="col">#</th>
                         <th scope="col">Course Name</th>
                         <th scope="col">Course Details</th>
-                        <th scope="col">Student</th>
+                        <th scope="col">Students Enrolled</th>
                     </tr>
                 </thead>
+                @php
+   $counter=0;
+@endphp
                 @foreach ($courses as $course)
 
                     @if( $course->user_id == session('user')->id )
-
+                       
                 <tbody>
                     <tr>
                         <td>{{$course->code}}</td>
                         <td>{{$course->name}}</td>
                     <td><a href="/courseDetails/{{$course->id}}">Details</a></td>
-                        <td>30 [40]</td>
-                    <td><a href="/giveMarks/{{$course->id}}"> Give Marks </a> </td>
+                        <td>@php
+                                echo $countArr[$counter];
+                              @endphp  [40]</td>
+                            
+                                 
+                                        @php
+                                       $counter++;
+                                     @endphp 
+ 
+
+                    <td><a href="/giveMarks/{ {$course->id}}"> Give Marks </a> </td>
                     </tr>
                    
                 </tbody>
