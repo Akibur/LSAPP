@@ -64,12 +64,15 @@ class SigninController extends Controller
              } 
              
              else if ($role == "student" && $blocked == 0) {
-                echo  "stuedent login sucess";
+                
+                
+
+               //echo  "stuedent login sucess";
             } 
 
             else if ($role== "teacher" && $blocked == 0) {
-                echo  "teacher login sucess";
-            } 
+                $request->session()->put('user', $result);
+                return redirect('/teacherHome');            } 
 
             else 
             $request->session()->flash('message', 'Your account is blocked.Please contact the IT department ');

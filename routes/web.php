@@ -27,13 +27,15 @@ Route::post('/signup', 'SignupController@studentSignup');
 
 //Admin home controller
 Route::get('/adminHome','AdminHomeController@index');
-Route::get('/createCourse','AdminHomeController@createCourse');
+Route::get('/createCourse','AdminHomeController@createCourse'); //renders create course view
 Route::post('/createCourse','AdminHomeController@storeCourse'); //creates new course in database
 Route::post('/createTeacher','AdminHomeController@storeTeacher'); //creates new teacher in database
+Route::get('/createTeacher','AdminHomeController@createTeacher'); //renders create teacher view
 
-
-Route::get('/createTeacher','AdminHomeController@createTeacher');
-
+//Teacher  controller
+Route::get('/teacherHome','TeacherController@index');
+Route::get('/teacherProfile','TeacherController@showProfile');//render show teacher profile view
+Route::get('/showEditTeacherProfile','TeacherController@showEditTeacherProfile'); //render edit teacher profile view
 
 
 
