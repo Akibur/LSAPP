@@ -30,10 +30,10 @@
                 <h3>About Me</h3>
             </div>
             <div class="col-4">
-                <a href="/showEditTeacherProfile"><h6 class="text-right" style="color:#0078D7"><i class="fas fa-edit" style="color:#0078D7"></i> Edit Profile</h6></a>
+                <a href="/editTeacherProfile"><h6 class="text-right" style="color:#0078D7"><i class="fas fa-edit" style="color:#0078D7"></i> Edit Profile</h6></a>
             </div>
             <div class="col-4">
-                <a href="changePassword.html"><h6 class="text-right" style="color:#0078D7"><i class="fas fa-edit" style="color:#0078D7"></i> Change Password</h6></a>
+                <a href="/changePassword"><h6 class="text-right" style="color:#0078D7"><i class="fas fa-edit" style="color:#0078D7"></i> Change Password</h6></a>
             </div>
         </div>
         <br>

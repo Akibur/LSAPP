@@ -11,7 +11,7 @@
                 <p class=" container alert alert-danger">{{session('message')}}</p>
         @endif 
          @if(session('messageSuccess'))
-            <p class=" container alert alert-success"">{{session('messageSuccess')}}</p>
+            <p class=" container alert alert-success">{{session('messageSuccess')}}</p>
         @endif
     
         <form class="form-signin" method="POST">

@@ -40,8 +40,8 @@
                     </tr>
                 </thead>
                 @php
-   $counter=0;
-@endphp
+                     $counter=0;
+                @endphp
                 @foreach ($courses as $course)
 
                     @if( $course->user_id == session('user')->id )
@@ -53,7 +53,7 @@
                     <td><a href="/courseDetails/{{$course->id}}">Details</a></td>
                         <td>@php
                                 echo $countArr[$counter];
-                              @endphp  [40]</td>
+                              @endphp[40]</td>
                             
                                  
                                         @php
@@ -61,7 +61,7 @@
                                      @endphp 
  
 
-                    <td><a href="/giveMarks/{ {$course->id}}"> Give Marks </a> </td>
+                    <td><a href="/giveMarks/{{$course->id}}"> Give Marks </a> </td>
                     </tr>
                    
                 </tbody>

@@ -35,7 +35,11 @@ Route::get('/createTeacher','AdminHomeController@createTeacher'); //renders crea
 //Teacher  controller
 Route::get('/teacherHome','TeacherController@index');
 Route::get('/teacherProfile','TeacherController@showProfile');//render show teacher profile view
-Route::get('/showEditTeacherProfile','TeacherController@showEditTeacherProfile'); //render edit teacher profile view
+Route::get('/editTeacherProfile','TeacherController@ShowEditTeacherProfile'); //render edit teacher profile view
+Route::post('/editTeacherProfile','TeacherController@editTeacherProfile'); // edit teacher profile and store in database
+Route::get('/changePassword','TeacherController@showChangePassword'); //render change password view
+Route::post('/changePassword','TeacherController@changePassword'); // change password and store
+
 
 
 

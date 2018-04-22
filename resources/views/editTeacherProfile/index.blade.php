@@ -22,19 +22,26 @@
 
 
 
+        @if(session('messageFaliure'))
+        <p class=" container alert alert-danger">{{session('message')}}</p>
+@endif 
+ @if(session('messageSuccess'))
+    <p class=" container alert alert-success">{{session('messageSuccess')}}</p>
+@endif
+        <form class="form-signin" method="POST">
+            <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 
-        <form class="form-signin">
             <h1 class="h3 mb-3 font-weight-normal">Edit profile</h1>
 
             <label for="inputName" class="sr-only">Name</label>
-            <input type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
+            <input name = "name" type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
 
             <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+            <input  name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
 
             <div class="radio ">
                 <label>
-                    <input type="radio" value="Name" name="Gender" required> Male
+                    <input type="radio" value="Male" name="Gender" required> Male
                     <input type="radio" value="Female" name="Gender"> Female
                 </label>
             </div>
